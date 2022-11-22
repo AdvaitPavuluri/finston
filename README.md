@@ -13,4 +13,6 @@
 
 ❗ It is important to note that programs written in VEXcode V5 will save as a `.v5python` file instead of a  `.py` file. If this type of file is pushed to GitHub, it will look like [this](https://github.com/AdvaitPavuluri/VEX_Controller_Code/blob/main/VEX_Controller.v5python). 
 
-The fix for this issue is to use [Visual Studio Code](https://code.visualstudio.com/) along with the [VEX Robotics extension](https://marketplace.visualstudio.com/items?itemName=VEXRobotics.vexcode). This is the superior method of coding with VEX equipment—I simply do not see any advantages for using VEXcode over VS Code.
+The fix for this issue is to use [Visual Studio Code](https://code.visualstudio.com/) along with the [VEX Robotics extension](https://marketplace.visualstudio.com/items?itemName=VEXRobotics.vexcode). 
+
+However, this plugin refuses to transfer the files from VS Code to the physical robot brain. It is unknown as to why this is the case. Therefore, VS Code can currently only be used for version control—VEXcode is still required to download and run the physical robot's program.
