@@ -37,8 +37,6 @@ Back
 
 '''
 
-from vex import *
-
 # Brain should be defined by default
 brain = Brain()
 controller = Controller()
