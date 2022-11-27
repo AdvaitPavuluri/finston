@@ -49,14 +49,11 @@ def rotate(x, y):
 
     return x, y
 
-def parse(axis, velo, override=None):
-    if override is not None:
-        axis.spin(override)
+def parse(axis, velo):
+    if velo > 0:
+        axis.spin(FORWARD)
     else:
-        if velo > 0:
-            axis.spin(FORWARD)
-        else:
-            axis.spin(REVERSE)
+        axis.spin(REVERSE)
 
     axis.set_velocity(velo, PERCENT)
 
