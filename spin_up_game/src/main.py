@@ -55,7 +55,7 @@ def parse(axis, velo):
     else:
         axis.spin(REVERSE)
 
-    axis.set_velocity(velo, PERCENT)
+    axis.set_velocity(velo, RPM)
 
 def drive_mapping():
     while True: # infinite looping or else this check can only run once
@@ -73,6 +73,8 @@ def drive_mapping():
         motor_3 = Motor(Ports.PORT3, GearSetting.RATIO_18_1, not isLpressed)
         motor_4 = Motor(Ports.PORT4, GearSetting.RATIO_18_1, not isRpressed)
 
+        # changes direction of motors based on whether it is turning
+
         drive_x = MotorGroup(motor_1, motor_3)
         drive_y = MotorGroup(motor_2, motor_4)
 
@@ -81,6 +83,7 @@ def drive_mapping():
         # convert back
 
         x_pos, y_pos = rotate(x_pos, y_pos)
+        x_pos, y_pos = x_pos * 5, y_pos * 5 # converts to max of 500 rpm
 
         if x_pos != 0:
             parse(drive_x, x_pos)
