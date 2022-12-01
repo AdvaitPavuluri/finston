@@ -8,7 +8,7 @@ rotate(x, y, rotation_angle=math.pi / 4):
 
 - `x`: float or integer
 - `y`: float or integer
-- `rotation_angle`: float angle in radians
+- `rotation_angle`: float angle in radians (default is pi/4)
 
 ```python
 parse(axis, velo, units=RPM):
